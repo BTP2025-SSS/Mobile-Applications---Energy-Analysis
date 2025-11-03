@@ -58,6 +58,8 @@ This can cause:
 
 4. Unnecessary load on servers
 
+![alt text](assets/image.png)
+
 ## Modified Code
 
 ```
