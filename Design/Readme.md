@@ -3,6 +3,10 @@
 This project is a **C++ framework** for detecting **code smells** in **Kotlin applications**.  
 It leverages **Tree-sitter** to parse Kotlin source code into an **AST (Abstract Syntax Tree)** and then performs multiple layers of analysis — including **Symbol Table** and  **Control Flow Graph (CFG)** — to identify performance-related smells like **memory leaks**, **CPU overuse**, **resource mismanagement** and **Network Related**.
 
+## Overview
+
+![alt text](HLD.png)
+
 ## Step-by-Step Design
 
 ### **1 .Tree-Sitter Parser**
