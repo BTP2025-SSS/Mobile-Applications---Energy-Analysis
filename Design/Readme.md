@@ -1,7 +1,7 @@
 # Code Smell Detection Framework
 
 This project is a **C++ framework** for detecting **code smells** in **Kotlin applications**.  
-It leverages **Tree-sitter** to parse Kotlin source code into an **AST (Abstract Syntax Tree)** and then performs multiple layers of analysis — including **Symbol Table** and  **Control Flow Graph (CFG)** — to identify performance-related smells like **memory leaks**, **CPU overuse**, **resource mismanagement** and **Network Related**.
+It leverages **Tree-sitter** to parse Kotlin source code into an **AST (Abstract Syntax Tree)** and then performs multiple layers of analysis — including **Symbol Table** ,  **Control Flow Graph (CFG)** and **Data Flow Graph (CFG)** — to identify performance-related smells like **memory leaks**, **CPU overuse**, **resource mismanagement** and **Network Related**.
 
 ## Overview
 
@@ -10,9 +10,9 @@ It leverages **Tree-sitter** to parse Kotlin source code into an **AST (Abstract
 ## Step-by-Step Design
 
 ### **1 .Tree-Sitter Parser**
-- **Goal:** Generate the Abstract Syntax Tree (AST) for Kotlin code.
+- **Goal:** To Generate the Abstract Syntax Tree (AST) for Kotlin code.
 **Implementation:**
-  - Use [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) with the Kotlin grammar.
+  - Used [Tree-sitter](https://tree-sitter.github.io/tree-sitter/) with the Kotlin grammar.
   - Parse source files and export the tree as a JSON expression.
 - **Output:** A structured AST file representing Kotlin syntax.
 
@@ -88,7 +88,7 @@ It leverages **Tree-sitter** to parse Kotlin source code into an **AST (Abstract
 
 - **Responsibilities**:
 
-    - Traverse the AST, Symbol Table, and CFG.
+    - Traverse the AST, Symbol Table, CFG and DFG.
 
     - Implement smell-specific rule classes:
 
