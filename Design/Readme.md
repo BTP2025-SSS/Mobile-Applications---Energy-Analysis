@@ -54,6 +54,33 @@ It leverages **Tree-sitter** to parse Kotlin source code into an **AST (Abstract
 
     - Detects infinite loops, unused branches, and CPU-heavy computations.
 
+### 4 . DFG (Data Flow Graph) Builder
+
+- **Goal**: Models how data flows in the program.
+
+- **Dependencies**: AST (to know variable nodes) , Symbol Table (to know types / scopes) , CFG (to know execution sequence)
+
+- **Responsibilities**:
+
+    - Track how data moves between operations.
+
+    - Build edges based on: Definitions (Def) and Uses (Use)
+
+    - Identify:
+        - Read-after-write (RAW)  ,       Write-after-write (WAW)  ,  Write-after-read (WAR)
+
+- **Use Case:**
+
+    - Memory Leak Detector
+
+    - Allocation-in-Loop Detector
+
+    - Unreleased Resource Detector
+
+    - Heavy Object Reuse Detector
+
+    - Uninitialized Variable Detector
+
 
 ## 5. Smell Detection Engine
 
